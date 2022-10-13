@@ -2,4 +2,9 @@
 
 {% block content %}
 <h1>USERS PAGE</h1>
+{% for user in all_users %}
+    {{user.name}}
+    {{user.bio|slice:"150"}}
+<a href="{% url 'user-profile' user.id %}">link</a>
+{% endfor %}
 {% endblock content %}
