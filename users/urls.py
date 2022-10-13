@@ -3,6 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    path('users/', views.users, name="users"),
+    path('profiles/', views.users, name="profiles"),
     # path('user/<str:pk>', views.users, name="user"),
 ]
