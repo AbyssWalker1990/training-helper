@@ -2,6 +2,15 @@
 
 {% block content %}
 <h1>All trainings here</h1>
-
+<div id="training">
+{% for training in trainings %}
+    <a href="{% url 'training-single' training.id %}"><p>{{training.name}}</p></a>
+    <p>{{training.description}}</p>
+    {% for exercise in exercises %}
+        <p>{{exercise.name}}</p>
+        <p>{{exercise.name}}</p>
+    {% endfor %}
+{% endfor %}
+</div>
 
 {% endblock content %}
