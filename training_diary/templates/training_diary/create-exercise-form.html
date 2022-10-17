@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>CREATE EXERCISE</h1>
+<form class="form" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {% for field in form %}
+    <!-- Input:Text -->
+    <div class="form__field">
+        <label for="formInput#text">{{field.label}}</label>
+        {{field}}
+    </div>
+    {% endfor %}
+
+    <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
+</form>
+{% endblock content %}
