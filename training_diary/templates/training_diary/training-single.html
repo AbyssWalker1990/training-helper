@@ -2,6 +2,9 @@
 
 {% block content %}
 <h1>SINGLE TRAINING</h1>
+{% if not exercises %}
+<a href="">Start adding EXERCISES</a>>
+{% endif %}
 {% for exercise in exercises %}
     <p>{{exercise.exercise_name}}</p>
     {% for set in exercise.set_set.all %}

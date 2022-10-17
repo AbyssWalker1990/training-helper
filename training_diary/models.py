@@ -7,10 +7,10 @@ import uuid
 
 
 class Training(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=300)
     description = models.CharField(max_length=800, blank=True, null=True)
-    date = models.DateTimeField()
+    date = models.DateTimeField(blank=True, null=True)
 
     created = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
