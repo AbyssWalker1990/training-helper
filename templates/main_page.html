@@ -4,5 +4,11 @@
 <h1>MAIN PAGE</h1>
 
 <p>Content for main page</p>
+<a href="{% url 'user-profile' user.profile.id %}">User Profile</a>
+<br>
+<a href="{% url 'profiles' %}">All Users</a>
+<br>
+<a href="{% url 'all-user-trainings' user.id %}">All Trainings</a>
+
 
 {% endblock content %}
